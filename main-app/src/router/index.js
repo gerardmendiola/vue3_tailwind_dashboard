@@ -1,14 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Dashboard from '../pages/dashboard/index.vue'
+import AboutUs from '../pages/about-us/index.vue'
+import Profile from '../pages/profile/index.vue'
 
 const routes = [
   {
-    meta: {
-      title: 'Dashboard it is!'
-    },
     path: '/',
     name: 'Dashboard',
     component: Dashboard
+  },
+  {
+    path: '/about-us',
+    name: 'About Us',
+    component: AboutUs
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
   },
 ]
 

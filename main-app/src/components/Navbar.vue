@@ -1,10 +1,11 @@
 <template>
-    <nav class="relative flex flex-wrap items-center justify-between py-4 shadow-lg">
+    <nav class="relative flex flex-wrap items-center justify-between py-4 shadow-lg bg-zinc-800">
         <div class="container mx-auto flex flex-wrap items-center justify-between">
             <div class="w-full relative flex justify-between w-auto static block justify-start">
                 <button class="bg-transparent lg:mr-4" v-on:click="toggleNavbar()">
                     <Bars3Icon class="size-6 inline-block mb-1" />
                 </button>
+                
                 <span class="text-xl capitalize mt-2">{{ displayTitle }}</span>
             </div>
             <div class="lg:flex lg:flex-grow items-center lg:mr-0 mr-5">
@@ -22,12 +23,12 @@
 import { Bars3Icon } from '@heroicons/vue/24/solid'
 
 export default {
-  data:() => ({
-    title: "",
-  }),
   components: {
     Bars3Icon
   },
+  data:() => ({
+    title: "",
+  }),
   computed: {
     displayTitle() {
         return this.$route.path == '/' ? 'dashboard' : this.$route.path.split('/')[1]
