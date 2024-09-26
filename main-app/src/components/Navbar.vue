@@ -13,7 +13,7 @@
         <span class="flex flex-col lg:flex-row list-none ml-auto">
           <button class="bg-transparent lg:mr-4" v-on:click="onUpdateTheme()">
 
-            <SunIcon v-if="theme == 'light'" class="size-6 inline-block mb-1" />
+            <SunIcon v-if="theme == 'dark'" class="size-6 inline-block mb-1" />
             <MoonIcon v-else class="size-6 inline-block mb-1" />
           </button>
 
