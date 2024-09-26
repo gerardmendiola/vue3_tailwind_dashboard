@@ -1,7 +1,8 @@
 <template>
     <nav
       :class="navMenu ? 'navbar-open' : 'navbar-close'"
-      class="fixed top-0 left-0 h-screen p-4 overflow-y-auto transition-transform -translate-x-full lg:w-80 w-full bg-zinc-700"
+      class="fixed top-0 left-0 h-screen p-4 overflow-y-auto transition-transform -translate-x-full lg:w-80 w-full
+      bg-gray-200 dark:bg-zinc-700 text-black dark:text-gray-100"
     >
       <div class="flex pr-2 justify-end pb-3 border-b border-zinc-600">
         <button @click="toggleNavbar()" class="bg-transparent">
@@ -48,7 +49,8 @@ export default {
         this.$store.commit("UPDATE_NAV_MENU", false)
     },
     activeRoute(url) {
-        if (url == this.$route.path) return 'text-blue-500 font-bold'
+      return url == this.$route.path ? 'text-blue-500 font-bold' : 'text-black dark:text-gray-100'
+        // if (url == this.$route.path) return 'text-blue-500 font-bold'
     }
   }
 }
